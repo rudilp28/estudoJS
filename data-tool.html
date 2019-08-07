@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta charset="pt-br">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>data-tool</title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+	body{
+		margin: 0px;
+		padding: 0px;
+		background: #2980b9;
+	}
+	/* .data-tool{
+		width: 800px;
+		height: 650px;
+		margin: 0 auto;
+		position: relative;
+	} */
+
+	.botao input[type = button]{
+		width: 160px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 14px 40px;
+		display: block;
+		position: absolute;
+		border: 2px solid #673ab7e0;
+		top: 70%;
+		left: 44%;
+		margin-top: 5%;
+		cursor: pointer;
+
+	}
+	.data-tool{
+	width: 300px;
+    padding: 20px;
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #bdc3c7;
+    border-radius: 5px;
+    height: auto;
+    -moz-box-shadow:  4px 25px 25px #00000082;
+	-webkit-box-shadow:  4px 25px 25px #00000082;
+	box-shadow:  4px 25px 25px #00000082;
+	display: none;
+}
+.content{
+	overflow: auto;
+	height: 200px;
+	padding-right: 5px;
+	background: #ecf0f1;
+	padding-left: 10px;
+}
+
+#triangulo{
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	background-color: #bdc3c7;
+	right: 175px;
+	bottom: -14px;
+	transform: rotate(45deg);
+}
+.botao input:hover{
+	transform: scale(0.8);
+}
+.close{
+	float: right;
+
+}
+.close img {
+	width: 30px;
+	height: 30px;
+}
+	
+
+	
+</style>
+
+<body>
+
+		
+			<div class="botao">
+				<input id="btn" type="button" value="button">
+			</div>
+			<div class="data-tool">
+				<div class="close">  
+					<a href="#" id="btn-close">
+						<img src="img/icon-close.png">
+					</a>
+				</div>
+				<span id = "triangulo"></span>
+				<h1>titulo </h1>
+				<div class="content">
+					<p>texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto
+					texto loren ipsuntexto texto loren ipsuntexto texto loren ipsuntexto </p>
+				</div>
+			</div>
+		
+	
+		
+
+		
+	</div>
+
+	<script>
+		var tolltip = document.querySelector('.data-tool');
+
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', function( ) {
+		tolltip.style.display = "block";
+		});
+
+		var btnClose = document.getElementById("btn-close");
+		btnClose.addEventListener('click', function() {
+		tolltip.style.display = "none";
+
+		});
+
+
+
+
+		
+	
+	</script>	
+</body>
+</html>

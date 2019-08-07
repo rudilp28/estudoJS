@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta charset="pt-br">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+	.box{
+		background: #e3eaea;
+		width: 800px;
+		height: 300px;
+	}
+	.box1{
+		background: #00ACC1;
+		padding: 16px 16px 8px;
+		color: white;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+
+	}
+	.box2{
+		background: #00ACC1;
+		padding: 2px 16px 8px;
+		color: white;
+
+	}
+	.bloco1 {
+    	width: 200px;
+    	position: absolute;
+    	margin: 20px;
+}
+	.h3{
+		margin: 0 auto;
+		font-size: 18px;.
+		font-family: sans-serif;
+	}
+	.h4{
+		margin: 0 auto;
+		font-size: 18px;
+	}
+	p{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+</style>
+
+<body>
+	<div class="box">
+		<div class="box1">
+			<h3 class="h3">Indice de massa corporal(IMC)</h3>
+		</div>
+		<div class="box2">
+			<h4 class="h4">Uma medida da gordura corporal em adultos</h4>
+		</div>
+		<div class="bloco1">
+			<div class="bloco2">
+			<p>peso</p>
+			<input type="number" id="peso"/>
+			</div>
+			<div class="bloco3">
+			<p>Altura</p>
+			<input type="number" id="altura"/>
+			</div>
+			<input type="submit" onclick="calcula();" value="calcular">
+			<div class="bloco4">
+			<input type="text" id="visor"/>
+			</div>
+			
+		</div>
+	</div>
+
+	<script>
+		
+		function calcula(){
+			var peso=document.getElementById("peso").value;
+			var altura=document.getElementById("altura").value;
+			var calculo= (peso/altura**2).toFixed(1);
+			var result=calculo;
+			var visor=document.getElementById("visor");
+			visor.value= result;
+			
+		}
+
+		// var peso = .number1();
+		// var altura = .number2();
+		// var calculo = (peso/altura**2);
+		// var result = calculo;
+		// alert (result);
+
+	
+		
+		// var n = window.prompt();
+		// var n2 = window.prompt();
+		// var soma = (n*n2)
+		// window.alert (soma)
+
+		// 	var a = 5+3
+		// 	window.alert (a)
+
+		// 	var b = a * 8
+		// 	window.alert ('a * 8' + b)
+
+			// var n = 3
+			// var n=n + 4
+			// window.alert (n)
+
+			// var media = 6.5;
+		
+		// function media(student,callback,media=6.5){
+		// 	var result = (student>=media)? 'passou' : 'nope';
+		// 	if(student>media){
+		// 		result = 'passou';
+		// 	} else if(student==media){
+		// 		result = 'raspou miserável';
+		// 	} else {
+		// 		result = 'nope';
+		// 	}
+		// 	callback();
+		// 	alert(result);
+		// }
+
+		// media(3,function(){
+		// 	alert('caraca');
+		// });
+		// media(10,function(){
+		// 	alert('caraca2');
+		// },10);
+
+		// var media = 6.5;
+		// var aluno = 6.8;
+		// var result = (aluno>=media)? 'passou' : 'reprovado' ;
+		// if (aluno==media){
+		// 	result = 'raspou'
+		// }
+		// alert (result);
+
+		
+		
+
+			
+			
+
+
+	</script>	
+</body>
+</html>
