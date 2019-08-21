@@ -38,6 +38,7 @@
 	ul li a{
 		text-decoration: none;
 
+
 	}
 	ul{
 		list-style: none;
@@ -47,8 +48,11 @@
 	}
 	ul li{
 		padding: 10px;
-		background: tomato;
 		border-right: 5px solid;
+		padding: 20px 20px;
+	}
+	ul li:hover{
+		background-color: blue;
 	}
 	nav{
 		width: 100%;
@@ -60,15 +64,25 @@
 
 	nav ul{
 		display: flex;
-		justify-content: left:  ;
-
+		justify-content:center  ;
+		
 	}
 	.container{
 		margin: 0 auto;
 		width: 720px;
 		padding: 0 2%;
 	}
+	h2::before{
+		content: "";
+		display: inline-block;
+		background-color: blue;
+		height: 18px;
+		width: 18px;
+		/* border-radius: 50px; */
+		margin-right: 5px;
 
+
+	}
 
 
 
@@ -78,24 +92,28 @@
 <body>
 <nav class="menu">
 	<ul>
-		<li><a href="">JS</a></li>
-		<li><a href="">UI</a></li>
-		<li><a href="">CSS</a></li>
-		<li><a href="">WEB</a></li>
-		<li><a href="">UX</a></li>
+		<li><a href="#sobre">Sobre</a></li>
+		<li><a href="#ui">UI</a></li>
+		<li><a href="#css">CSS</a></li>
+		<li><a href="#web">WEB</a></li>
+		<li><a href="#ux">UX</a></li>
 	</ul>
 </nav>
 <div class="container">	
 	
 
 	<h1>Rudinei Lopes</h1>
+	<br>
+	<br>
 
-	<section id="js">
+	<section id="sobre">
 		<h2>Sobre Mim</h2>
 		<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.</p>
 		<a target="_blank"href= https://www.behance.net/rudineiroc4558>Ver Mais</a>
 
 	</section>
+	<br>
+	<br>
 
 	<section id="ui">
 		<h2>UI Desing</h2>
@@ -103,8 +121,62 @@
 		<a target="_blank"href= https://www.behance.net/rudineiroc4558>Ver Mais</a>
 
 	</section>
+
+	<br>
+	<br>
+
+	<section id="css">
+		<h2>Css Desing</h2>
+		<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.</p>
+		<a target="_blank"href= https://www.behance.net/rudineiroc4558>Ver Mais</a>
+
+	</section>
+
+	<br>
+	<br>
+
+	<section id="web">
+		<h2>Web Desing</h2>
+		<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.</p>
+		<a target="_blank"href= https://www.behance.net/rudineiroc4558>Ver Mais</a>
+
+	</section>
+
+	<br>
+	<br>
+
+	<section id="ux">
+		<h2>Ux Desing</h2>
+		<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.</p>
+		<a target="_blank"href= https://www.behance.net/rudineiroc4558>Ver Mais</a>
+
+	</section>
 	 </div>
 </body>
+
+<script type="text/javascript">
+	var menuItens = document.querySelectorAll('.menu a')
+
+	menuItens.forEach(item => {
+		item.addEventListener('click' , scrollToIdClick);
+	})
+
+	function scrollToIdClick(event) {
+		var element = event.target;
+		event.preventDefault();
+		var id = element.getAttribute('href');
+		var to = document.querySelector(id).offsetTop;
+
+
+	window.scroll({
+		top: to - 90,
+		behavior: "smooth",
+		});
+		
+	}
+
+
+</script>
 
 
 </html>
